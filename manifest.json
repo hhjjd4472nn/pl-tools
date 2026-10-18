@@ -1,0 +1,48 @@
+{
+  "name": "pl-tools",
+  "author": "hhjjd4472nn",
+  "title": "链接解析助手",
+  "description": "粘贴网盘分享链接即可直接下载",
+  "icon": "",
+  "version": "1.0.0",
+  "homepage": "",
+  "repository": {
+    "url": "https://github.com/hhjjd4472nn/pl-tools"
+  },
+  "scripts": [
+    {
+      "event": "onResolve",
+      "match": {
+        "urls": [
+          "*://pan.baidu.com/*",
+          "*://pan.xunlei.com/*",
+          "*://pan.quark.cn/*"
+        ]
+      },
+      "entry": "index.js"
+    }
+  ],
+  "settings": [
+    {
+      "name": "dp_password",
+      "title": "百度网盘解析密码",
+      "description": "在解析站获取的解析密码，填写后即可解析百度网盘链接",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "xl_password",
+      "title": "迅雷网盘解析密码",
+      "description": "迅雷网盘解析密码（暂时留空，后续版本启用）",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "kk_password",
+      "title": "夸克网盘解析密码",
+      "description": "夸克网盘解析密码（暂时留空，后续版本启用）",
+      "type": "string",
+      "value": ""
+    }
+  ]
+}
